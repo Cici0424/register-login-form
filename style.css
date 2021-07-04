@@ -1,0 +1,235 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #a6df99;
+            padding: 70px;
+        }
+        
+        .container .title {
+            font-size: 18px;
+            font-weight: 700px;
+            padding: 0 20px;
+        }
+        
+        .container {
+            position: relative;
+            max-width: 850px;
+            width: 100%;
+            background-color: #fff;
+            padding: 50px 0px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            perspective: 2700px;
+        }
+        
+        .container .cover {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 100%;
+            width: 50%;
+            z-index: 98;
+            transition: all 1s ease;
+            transform-origin: left;
+            transform-style: preserve-3d;
+        }
+        
+        .container .cover::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: #dbfcd4;
+            opacity: 0.5;
+            z-index: 100;
+        }
+        
+        .container .cover::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: #dbfcd4;
+            opacity: 0.5;
+            z-index: 100;
+            margin-top: -20px;
+            transform: rotateY(180deg);
+        }
+        
+        .container #flip:checked~.cover {
+            transform: rotateY(-180deg);
+        }
+        
+        .container .cover img {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: 12;
+            backface-visibility: hidden;
+        }
+        
+        .container .cover .back img {
+            transform: rotateY(180deg);
+        }
+        
+        .container .cover .front .text {
+            position: absolute;
+            z-index: 111;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cover .front .text .text-1,
+        .cover .front .text .text-2 {
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            color: rgb(49, 49, 49);
+            backface-visibility: hidden;
+        }
+        
+        .container .form {
+            height: 100%;
+            width: 100%;
+            background: #fff;
+        }
+        
+        .container .form-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .form-content .login-form,
+        .form-content .signup-form {
+            width: calc(100%/2-25px);
+            /* background: red; */
+        }
+        
+        .form .form-content .title {
+            position: relative;
+            font-size: 25px;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .form .form-content .title:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            color: #333;
+            width: 25px;
+            height: 3px;
+            background: #a6df99;
+        }
+        
+        .form .signup-form .title:before {
+            width: 20px;
+        }
+        
+        .form .form-content .input-boxes {
+            margin-top: 30px;
+        }
+        
+        .form .form-content .input-box {
+            display: flex;
+            align-items: center;
+            height: 90px;
+            width: 100%;
+            margin: 70px 20px;
+            position: relative;
+        }
+        
+        .form-content .input-box input {
+            height: 100%;
+            width: 100%;
+            outline: none;
+            border: none;
+            padding: 20px 45px;
+            font-size: 15px;
+            font-weight: 500;
+            margin: 0px 10px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .form-content .input-box input:focus,
+        .form-content .input-box input:valid {
+            border-color: #a6df99;
+        }
+        
+        .form-content .input-box i {
+            position: absolute;
+            color: #84d372;
+            font-size: 17px;
+            padding: 23px 18px;
+        }
+        
+        form .form-content .text a {
+            font-size: 15px;
+            font-weight: 500;
+            display: block;
+            padding: 7px 10px;
+            margin: 5px 1px;
+            color: #6cc459;
+            text-decoration: none;
+        }
+        
+        .form-content .input-box .text {
+            color: black;
+        }
+        
+        form .form-content .text a:hover {
+            text-decoration: underline;
+        }
+        
+        form .form-content .input-box .button {
+            color: #fff;
+            margin-top: 90px;
+        }
+        
+        form .form-content .button input {
+            color: #fff;
+            background: #95cf88;
+            border-radius: 6px;
+            padding: 6px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        
+        form .form-content .button input:hover {
+            background: #95cf88;
+        }
+        
+        form .form-content label {
+            color: #95cf88;
+            cursor: pointer;
+        }
+        
+        form .form-content label:hover {
+            text-decoration: underline;
+        }
+        
+        form .form-content .login-text,
+        form .form-content .signup-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            padding: 0 5px;
+        }

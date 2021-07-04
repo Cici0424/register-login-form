@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的响应式-注册登录</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="container">
+        <input type="checkbox" id="flip" hidden>
+        <div class="cover">
+            <div class="front">
+                <img src="back.jpg" alt="">
+                <div class="text">
+                    <span class="text-1">Cici的小作品</span>
+                    <span class="text-2">响应登录和注册表单</span>
+                </div>
+            </div>
+            <div class="back">
+                <img src="back.jpg" alt="">
+                <div class="text">
+                    <span class="text-1">Cici的小作品</span>
+                    <span class="text-2">响应登录和注册表单</span>
+                </div>
+            </div>
+        </div>
+        <form action="#">
+            <div class="form-content">
+                <div class="login-form">
+                    <div class="title">Login</div>
+                    <div class="input-boxes">
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="text"><a href="#">Forgot password?</a></div>
+                        <div class="button input-box">
+                            <input type="submit" value="Submit">
+                        </div>
+                        <div class="text login-text ">Don't have an account?<label for="flip">Signup now</label></div>
+                    </div>
+                </div>
+                <div class="signup-form">
+                    <div class="title">Signup</div>
+                    <div class="input-boxes">
+                        <div class="input-box">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Enter your name" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="button input-box">
+                            <input type="submit" value="Submit">
+                        </div>
+                        <div class="text signup-text">Already have an account?<label for="flip">Login now</label></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+</body>
+
+</html>
